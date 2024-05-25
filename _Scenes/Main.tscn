@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://bgyb1y3bthknc"]
+[gd_scene load_steps=5 format=3 uid="uid://bgyb1y3bthknc"]
+
+[ext_resource type="Script" path="res://_Scripts/Main.gd" id="1_6d206"]
+[ext_resource type="Texture2D" uid="uid://bvhl4cu7meaqp" path="res://_Assets/Background.png" id="1_le738"]
+[ext_resource type="Script" path="res://_Scripts/Cam_area.gd" id="3_8qjul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg8tj"]
+size = Vector2(1168, 666)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_6d206")
+metadata/_edit_vertical_guides_ = [1529.0]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_le738")
+
+[node name="Cam_area" type="Area2D" parent="."]
+script = ExtResource("3_8qjul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_area"]
+shape = SubResource("RectangleShape2D_yg8tj")
+
+[node name="Camera2D" type="Camera2D" parent="Cam_area/CollisionShape2D"]
+limit_left = -1530
+limit_top = -540
+limit_right = 1530
+limit_bottom = 540
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
