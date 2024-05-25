@@ -5,3 +5,6 @@ res://_Scenes/Main.gd
 res://_Scenes/Cam_area.gd
 res://_Scenes/Collision.gd
 res://_Scripts/Main.gd
+res://_Scenes/Overlay.tscn
+res://_Scenes/Overlay.gd
+res://_Scenes/Arrows.tscn

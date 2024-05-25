@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg56581sq7wfi"]
+
+[ext_resource type="Texture2D" uid="uid://crkm7ps76yr2" path="res://_Assets/UI/Chatbubble.png" id="1_gp1qg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Chatbubble" type="Sprite2D" parent="."]
+position = Vector2(576, 416)
+texture = ExtResource("1_gp1qg")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://_Scripts/Main.gd" id="1_6d206"]
 [ext_resource type="Texture2D" uid="uid://bvhl4cu7meaqp" path="res://_Assets/Background.png" id="1_le738"]
-[ext_resource type="Script" path="res://_Scripts/Cam_area.gd" id="3_8qjul"]
+[ext_resource type="PackedScene" uid="uid://dt1x2bx4124sy" path="res://_Scenes/Arrows.tscn" id="2_8wvls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yg8tj"]
 size = Vector2(1168, 666)
@@ -11,11 +11,19 @@ size = Vector2(1168, 666)
 script = ExtResource("1_6d206")
 metadata/_edit_vertical_guides_ = [1529.0]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ArrowLayer" parent="CanvasLayer" instance=ExtResource("2_8wvls")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_le738")
 
 [node name="Cam_area" type="Area2D" parent="."]
-script = ExtResource("3_8qjul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_area"]
 shape = SubResource("RectangleShape2D_yg8tj")
