@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgyb1y3bthknc"]
+[gd_scene load_steps=10 format=3 uid="uid://bgyb1y3bthknc"]
 
 [ext_resource type="Script" path="res://_Scripts/Main.gd" id="1_6d206"]
 [ext_resource type="Texture2D" uid="uid://bvhl4cu7meaqp" path="res://_Assets/Background.png" id="1_le738"]
 [ext_resource type="PackedScene" uid="uid://dt1x2bx4124sy" path="res://_Scenes/Arrows.tscn" id="2_8wvls"]
+[ext_resource type="Texture2D" uid="uid://uuakp0uhw0s2" path="res://_Assets/Interactables/turbotax.png" id="4_5boq6"]
+[ext_resource type="Texture2D" uid="uid://ch4xy53f8b1n8" path="res://_Assets/Interactables/Gobber.png" id="5_tbrib"]
+[ext_resource type="Texture2D" uid="uid://vwrix2hmdg80" path="res://_Assets/Interactables/Merch.png" id="6_5m4m4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yg8tj"]
 size = Vector2(1168, 666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntyap"]
+size = Vector2(718.218, 448.503)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c0anr"]
+blend_mode = 1
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_6d206")
@@ -35,3 +44,25 @@ limit_right = 1530
 limit_bottom = 540
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-186, -169.125)
+scale = Vector2(0.955142, 0.941466)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ntyap")
+
+[node name="Turbotax" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+material = SubResource("CanvasItemMaterial_c0anr")
+texture = ExtResource("4_5boq6")
+
+[node name="Gobber" type="Sprite2D" parent="."]
+position = Vector2(-987, -395)
+scale = Vector2(0.77, 0.77)
+texture = ExtResource("5_tbrib")
+
+[node name="Merch" type="Sprite2D" parent="."]
+position = Vector2(855.5, 112.833)
+scale = Vector2(0.833333, 0.833333)
+texture = ExtResource("6_5m4m4")

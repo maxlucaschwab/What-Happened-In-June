@@ -1,10 +1,5 @@
 res://_Scenes/Main.tscn
-res://_Scenes/StaticBody2D.gd
-res://_Scenes/MainCamera.gd
-res://_Scenes/Main.gd
-res://_Scenes/Cam_area.gd
-res://_Scenes/Collision.gd
-res://_Scripts/Main.gd
-res://_Scenes/Overlay.tscn
-res://_Scenes/Overlay.gd
-res://_Scenes/Arrows.tscn
+res://_Scenes/MainMenu.tscn
+res://_Scenes/Dialogue.tscn
+res://addons/dialogue_manager/test_scene.tscn
+res://_Scenes/Computer.tscn
