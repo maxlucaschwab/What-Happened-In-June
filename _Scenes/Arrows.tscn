@@ -1,14 +1,54 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt1x2bx4124sy"]
+[gd_scene load_steps=6 format=3 uid="uid://dt1x2bx4124sy"]
 
 [ext_resource type="Texture2D" uid="uid://b2ylxp3nseqog" path="res://_Assets/UI/DirectionalArrows.png" id="1_in6yg"]
 
-[node name="Control" type="Control"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fal4u"]
+size = Vector2(136, 658)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtw3b"]
+size = Vector2(136, 632)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1puj"]
+size = Vector2(915, 121)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8d1m"]
+size = Vector2(912.25, 129.625)
+
+[node name="Arrows" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Right" type="Area2D" parent="."]
+position = Vector2(1152, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2(-44, -319)
+shape = SubResource("RectangleShape2D_fal4u")
+
+[node name="Left" type="Area2D" parent="."]
+position = Vector2(576, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(-532, 4)
+shape = SubResource("RectangleShape2D_wtw3b")
+
+[node name="Up" type="Area2D" parent="."]
+position = Vector2(1152, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
+position = Vector2(-577.5, -612.5)
+shape = SubResource("RectangleShape2D_h1puj")
+
+[node name="Up2" type="Area2D" parent="."]
+position = Vector2(2304, 1280)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Up2"]
+position = Vector2(-1728, -664.813)
+shape = SubResource("RectangleShape2D_h8d1m")
 
 [node name="DirectionalArrows" type="Sprite2D" parent="."]
 position = Vector2(576, 320)

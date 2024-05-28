@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=10 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://_Assets/Dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Texture2D" uid="uid://crkm7ps76yr2" path="res://_Assets/UI/Chatbubble.png" id="2_e53c6"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -77,49 +78,64 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
-[node name="Panel" type="Panel" parent="Balloon"]
-clip_children = 2
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -183.0
-offset_right = -19.0
-offset_bottom = -19.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 1
+[node name="Chatbubble" type="Sprite2D" parent="Balloon"]
+position = Vector2(571, 360)
+scale = Vector2(0.755, 0.755)
+texture = ExtResource("2_e53c6")
 
-[node name="Dialogue" type="MarginContainer" parent="Balloon/Panel"]
-layout_mode = 1
+[node name="Dialogue" type="MarginContainer" parent="Balloon/Chatbubble"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -543.046
+offset_top = 143.046
+offset_right = -543.046
+offset_bottom = 199.046
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Panel/Dialogue"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Chatbubble/Dialogue"]
 layout_mode = 2
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Panel/Dialogue/VBoxContainer"]
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Chatbubble/Dialogue/VBoxContainer"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Panel/Dialogue/VBoxContainer" instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/Chatbubble/Dialogue/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
 text = "Dialogue..."
 
+[node name="Panel" type="Panel" parent="Balloon"]
+visible = false
+modulate = Color(0.447059, 0.529412, 0.32549, 1)
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.033
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -183.0
+offset_right = -57.016
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+
 [node name="Responses" type="MarginContainer" parent="Balloon"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -143,6 +159,8 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
 text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]

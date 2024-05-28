@@ -24,6 +24,10 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 general/states=["GameState"]
 general/balloon_path="res://_Assets/Dialogue/balloon.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

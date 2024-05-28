@@ -16,3 +16,5 @@ res://_Scenes/Mouse_cursor.tscn
 res://_Scripts/Mouse_cursor.gd
 res://_Scripts/goob_actionable.gd
 res://_Scripts/merch_actionable.gd
+res://_Scenes/Arrows.tscn
+res://_Assets/Dialogue/balloon.tscn
