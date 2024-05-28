@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckf34rjwafyys"]
+
+[ext_resource type="Script" path="res://_Scripts/merch_actionable.gd" id="1_lljcj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4bca"]
+size = Vector2(308.983, 412.952)
+
+[node name="Merch_area" type="Area2D"]
+position = Vector2(-16.2308, 17.0047)
+scale = Vector2(0.832285, 0.785631)
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_lljcj")
+
+[node name="MerchCollision" type="CollisionShape2D" parent="."]
+position = Vector2(18.3, -17.826)
+shape = SubResource("RectangleShape2D_y4bca")

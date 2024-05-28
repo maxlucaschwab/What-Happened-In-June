@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
+[dialogue_manager]
+
+general/states=["GameState"]
+general/balloon_path="res://_Assets/Dialogue/balloon.tscn"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
@@ -27,3 +32,11 @@ version_control/autoload_on_startup=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://_Assets/Dialogue/test.dialogue")
+
+[layer_names]
+
+2d_physics/layer_5="Actionables"

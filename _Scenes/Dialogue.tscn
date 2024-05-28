@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bg56581sq7wfi"]
+[gd_scene load_steps=3 format=3 uid="uid://bg56581sq7wfi"]
 
 [ext_resource type="Texture2D" uid="uid://crkm7ps76yr2" path="res://_Assets/UI/Chatbubble.png" id="1_gp1qg"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="2_cqvj5"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,5 +12,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Chatbubble" type="Sprite2D" parent="."]
-position = Vector2(576, 416)
+position = Vector2(568, 312)
+scale = Vector2(0.82, 0.82)
 texture = ExtResource("1_gp1qg")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Chatbubble"]
+offset_left = -537.0
+offset_top = 146.0
+offset_right = 566.0
+offset_bottom = 312.0
+script = ExtResource("2_cqvj5")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")

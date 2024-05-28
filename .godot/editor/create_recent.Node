@@ -1,10 +1,12 @@
+Sprite2D
 CollisionShape2D
 Area2D
+Node2D
+StaticBody2D
+DialogueLabel
 CanvasLayer
 Container
 Control
 CollisionPolygon2D
-Sprite2D
 RigidBody2D
-StaticBody2D
 Camera2D

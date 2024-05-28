@@ -1,0 +1,71 @@
+[gd_scene load_steps=14 format=3 uid="uid://bgyb1y3bthknc"]
+
+[ext_resource type="Script" path="res://_Scripts/Main.gd" id="1_6d206"]
+[ext_resource type="Texture2D" uid="uid://bvhl4cu7meaqp" path="res://_Assets/Background.png" id="1_le738"]
+[ext_resource type="PackedScene" uid="uid://dt1x2bx4124sy" path="res://_Scenes/Arrows.tscn" id="2_8wvls"]
+[ext_resource type="PackedScene" uid="uid://bg56581sq7wfi" path="res://_Scenes/Dialogue.tscn" id="2_gyrkp"]
+[ext_resource type="Texture2D" uid="uid://uuakp0uhw0s2" path="res://_Assets/Interactables/turbotax.png" id="4_5boq6"]
+[ext_resource type="PackedScene" uid="uid://cc653ofwu4ls7" path="res://_Scenes/cam_actionable.tscn" id="5_sxnyj"]
+[ext_resource type="Texture2D" uid="uid://ch4xy53f8b1n8" path="res://_Assets/Interactables/Gobber.png" id="5_tbrib"]
+[ext_resource type="PackedScene" uid="uid://24c08qnkbvj5" path="res://_Scenes/comp_actionable.tscn" id="6_2yj4g"]
+[ext_resource type="Texture2D" uid="uid://vwrix2hmdg80" path="res://_Assets/Interactables/Merch.png" id="6_5m4m4"]
+[ext_resource type="PackedScene" uid="uid://b2l3k8pr0kwrd" path="res://_Scenes/goob_actionable.tscn" id="7_uwarp"]
+[ext_resource type="Resource" uid="uid://dy32ahy12h5d6" path="res://_Assets/Dialogue/test.dialogue" id="8_g0025"]
+[ext_resource type="PackedScene" uid="uid://ckf34rjwafyys" path="res://_Scenes/merch_actionable.tscn" id="8_lclsj"]
+[ext_resource type="PackedScene" uid="uid://bpxy2dqa64m01" path="res://_Scenes/Mouse_cursor.tscn" id="11_ujgoi"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6d206")
+metadata/_edit_vertical_guides_ = [1529.0]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("2_gyrkp")]
+visible = false
+
+[node name="ArrowLayer" parent="CanvasLayer" instance=ExtResource("2_8wvls")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_le738")
+
+[node name="Cam_area" parent="." instance=ExtResource("5_sxnyj")]
+
+[node name="Computer" type="Sprite2D" parent="."]
+position = Vector2(-184.513, -160.25)
+scale = Vector2(0.937637, 0.937637)
+texture = ExtResource("4_5boq6")
+
+[node name="Computer_area" parent="Computer" instance=ExtResource("6_2yj4g")]
+position = Vector2(0.547287, -6.13242)
+scale = Vector2(1.01867, 1.00408)
+dialogue_resource = ExtResource("8_g0025")
+dialogue_start = "Computer"
+
+[node name="Goober" type="Sprite2D" parent="."]
+position = Vector2(-984, -393)
+scale = Vector2(0.912296, 0.886358)
+texture = ExtResource("5_tbrib")
+
+[node name="Goober_area" parent="Goober" instance=ExtResource("7_uwarp")]
+position = Vector2(-27.4034, 23.6925)
+scale = Vector2(1, 1)
+dialogue_resource = ExtResource("8_g0025")
+dialogue_start = "Goober"
+
+[node name="Merch" type="Sprite2D" parent="."]
+position = Vector2(916, 112)
+scale = Vector2(0.874317, 0.874317)
+texture = ExtResource("6_5m4m4")
+
+[node name="Merch_area" parent="Merch" instance=ExtResource("8_lclsj")]
+position = Vector2(-15, 47)
+dialogue_resource = ExtResource("8_g0025")
+dialogue_start = "Merch"
+
+[node name="Mouse_cursor" parent="." instance=ExtResource("11_ujgoi")]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc653ofwu4ls7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg8tj"]
+size = Vector2(1168, 666)
+
+[node name="Cam_area" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yg8tj")
+
+[node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
+limit_left = -1530
+limit_top = -540
+limit_right = 1530
+limit_bottom = 540
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0

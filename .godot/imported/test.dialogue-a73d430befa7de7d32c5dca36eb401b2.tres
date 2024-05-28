@@ -1,0 +1,106 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_mpcdx"]
+
+[resource]
+script = ExtResource("1_mpcdx")
+using_states = PackedStringArray()
+titles = {
+"Computer": "3",
+"Goober": "9",
+"Merch": "15"
+}
+character_names = PackedStringArray("Goblin", "Goober", "Merch")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "Computer",
+"type": &"title"
+},
+"11": {
+"id": "11",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"13": {
+"id": "13",
+"next_id": "15",
+"text": "Merch",
+"type": &"title"
+},
+"15": {
+"character": "Merch",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Hi, my name is Markiplier",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hi, my name is Markiplier",
+"type": &"dialogue"
+},
+"17": {
+"id": "17",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Goblin",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Hi [[Goob|Goblin|Gob]]!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hi [[Goob|Goblin|Gob]]!",
+"type": &"dialogue"
+},
+"5": {
+"id": "5",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"7": {
+"id": "7",
+"next_id": "9",
+"text": "Goober",
+"type": &"title"
+},
+"9": {
+"character": "Goober",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I am a goober",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I am a goober",
+"type": &"dialogue"
+}
+}
+raw_text = "~ Computer
+
+Goblin: Hi [[Goob|Goblin|Gob]]!
+
+=> END
+
+~ Goober
+
+Goober: I am a goober
+
+=> END
+
+~ Merch
+
+Merch: Hi, my name is Markiplier
+
+=> END"
+metadata/dialogue_manager_version = "2.39.1"

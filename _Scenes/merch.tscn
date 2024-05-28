@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca63w3podbfsg"]
+
+[ext_resource type="Texture2D" uid="uid://vwrix2hmdg80" path="res://_Assets/Interactables/Merch.png" id="1_mja5a"]
+[ext_resource type="PackedScene" uid="uid://ckf34rjwafyys" path="res://_Scenes/merch_actionable.tscn" id="2_td17g"]
+
+[node name="Merch" type="Sprite2D"]
+texture = ExtResource("1_mja5a")
+
+[node name="Merch_area" parent="." instance=ExtResource("2_td17g")]
+position = Vector2(-678, -614)
+dialogue_start = "Merch"
