@@ -8,7 +8,4 @@ res://_Scenes/Arrows.tscn
 res://_Assets/Dialogue/balloon.tscn
 res://_Scenes/cam_actionable.tscn
 res://addons/dialogue_manager/dialogue_label.tscn
-res://_Scripts/Game_State.gd
-res://_Scripts/Main.gd
 res://_Scenes/Dialogue.tscn
-res://_Scripts/comp_actionable.gd
