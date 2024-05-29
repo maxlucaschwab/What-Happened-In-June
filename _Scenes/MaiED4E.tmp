@@ -67,7 +67,6 @@ texture = ExtResource("6_5m4m4")
 position = Vector2(-15, 47)
 collision_layer = 16
 collision_mask = 0
-script = ExtResource("11_qgd7d")
 dialogue_resource = ExtResource("8_g4nlv")
 dialogue_start = "Merch"
 

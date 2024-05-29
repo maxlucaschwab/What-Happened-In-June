@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://24c08qnkbvj5" path="res://_Scenes/comp_actionable.tscn" id="6_2yj4g"]
 [ext_resource type="Texture2D" uid="uid://vwrix2hmdg80" path="res://_Assets/Interactables/Merch.png" id="6_5m4m4"]
 [ext_resource type="PackedScene" uid="uid://b2l3k8pr0kwrd" path="res://_Scenes/goob_actionable.tscn" id="7_uwarp"]
-[ext_resource type="Resource" uid="uid://beihnwk61m0gv" path="res://_Assets/Dialogue/items.dialogue" id="8_g4nlv"]
+[ext_resource type="Resource" uid="uid://b5fqreesg00n7" path="res://_Assets/Dialogue/items.dialogue" id="8_g4nlv"]
 [ext_resource type="PackedScene" uid="uid://ckf34rjwafyys" path="res://_Scenes/merch_actionable.tscn" id="8_lclsj"]
 [ext_resource type="Script" path="res://_Scripts/comp_actionable.gd" id="11_qgd7d"]
 [ext_resource type="PackedScene" uid="uid://bpxy2dqa64m01" path="res://_Scenes/Mouse_cursor.tscn" id="11_ujgoi"]
@@ -67,7 +67,6 @@ texture = ExtResource("6_5m4m4")
 position = Vector2(-15, 47)
 collision_layer = 16
 collision_mask = 0
-script = ExtResource("11_qgd7d")
 dialogue_resource = ExtResource("8_g4nlv")
 dialogue_start = "Merch"
 

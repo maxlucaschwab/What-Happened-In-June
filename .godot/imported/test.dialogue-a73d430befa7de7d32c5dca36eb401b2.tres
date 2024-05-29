@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_mpcdx"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_sld8f"]
 
 [resource]
-script = ExtResource("1_mpcdx")
+script = ExtResource("1_sld8f")
 using_states = PackedStringArray()
 titles = {
 "Computer": "3",
@@ -38,9 +38,9 @@ lines = {
 "next_id": "17",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Hi, my name is Markiplier",
+"text": "Hellooo everybody, my name is Markiplier",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Hi, my name is Markiplier",
+"translation_key": "Hellooo everybody, my name is Markiplier",
 "type": &"dialogue"
 },
 "17": {
@@ -100,7 +100,7 @@ Goober: I am a goober
 
 ~ Merch
 
-Merch: Hi, my name is Markiplier
+Merch: Hellooo everybody, my name is Markiplier
 
 => END"
 metadata/dialogue_manager_version = "2.39.1"

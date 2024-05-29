@@ -1,0 +1,54 @@
+~ Computer
+
+set GameState.inDialogue = true
+set GameState.position = GameState.index[0]
+
+Me: This must be the PC that June constantly works on. [wait = 0.2] Whenever I ask June to play Stardew, they always tell me they’re busy working on the newest game project,[wait = 0.2] Project Y for Snowstorm Games. 
+Me: When taking a closer look at the files on June’s computer, it looks like a cluttered mess. [wait = 0.2] By no means do I consider myself someone tidy but this– [wait = 0.2] There are files everywhere on the desktop!!
+
+Me: They must have been really stressed out.
+
+Me: …
+
+Me: It must have been really devastating for June when Project Y was recently shut down since the company was purchased out by Microsoft. 
+
+set GameState.inDialogue = false
+
+=> END
+
+~ Goober
+
+set GameState.inDialogue = true
+set GameState.position = GameState.index[1]
+
+Ah yes, beloved Brown Puffle plush! 
+
+The plush adorably sits and stares at you, no thoughts in its head. 
+
+Me: I remember June used to be super obsessed with Club Penguin as a kid, even going as far as wanting to become a game developer to pursue developing games professionally! 
+
+Me: Brown Puffle was definitely their favorite though. [wait = 0.2] Similar to the chocolate-colored puffball, June is super smart, inventive, and has a sweet tooth! 
+
+Me: Haha, how adorable… [wait = 0.2]I know June is just really stressed out and burnt out right now,[wait = 0.2] but maybe some good old flash games will cheer them up..?
+
+set GameState.inDialogue = false
+
+=> END
+
+~ Merch
+
+set GameState.inDialogue = true
+set GameState.position = GameState.index[2]
+
+Me: Looks like June still keeps around the offer package Snowstorm Games.[wait = 0.2] I still remember how initially they were so excited for the role, thinking that it was their dream job at their dream company.
+
+Me: They were telling me how excited they were to be able to be part of an all-encompassing “welcoming” team. 
+
+Me: After the first month, June was hesitant about the workplace demands, citing that the “Triple A” standards were especially tough with all of the “neverending” deadlines.
+
+Me: The swag bag just seems cruel and ironic now.[wait = 0.2] A cheaply embroidered beanie?[wait = 0.2] A couple of stickers?[wait = 0.2] All in exchange for draining the passion out of June. 
+
+set GameState.inDialogue = false
+
+=> END
+

@@ -1,0 +1,510 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_snu7e"]
+
+[resource]
+script = ExtResource("1_snu7e")
+using_states = PackedStringArray()
+titles = {
+"Computer": "3",
+"Goober": "21",
+"Merch": "40"
+}
+character_names = PackedStringArray("Me")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "Computer",
+"type": &"title"
+},
+"11": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "…",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "…",
+"type": &"dialogue"
+},
+"13": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "It must have been really devastating for June when Project Y was recently shut down since the company was purchased out by Microsoft.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It must have been really devastating for June when Project Y was recently shut down since the company was purchased out by Microsoft.",
+"type": &"dialogue"
+},
+"15": {
+"id": "15",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "inDialogue"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "17",
+"type": &"mutation"
+},
+"17": {
+"id": "17",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"19": {
+"id": "19",
+"next_id": "21",
+"text": "Goober",
+"type": &"title"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "inDialogue"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "22",
+"type": &"mutation"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "position"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": &"dictionary_reference",
+"value": Array[Dictionary]([{
+"type": "number",
+"value": 1
+}]),
+"variable": "index"
+}]),
+"is_blocking": true
+},
+"next_id": "24",
+"type": &"mutation"
+},
+"24": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "26",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Ah yes, beloved Brown Puffle plush!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ah yes, beloved Brown Puffle plush!",
+"type": &"dialogue"
+},
+"26": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "28",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The plush adorably sits and stares at you, no thoughts in its head.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The plush adorably sits and stares at you, no thoughts in its head.",
+"type": &"dialogue"
+},
+"28": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "30",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I remember June used to be super obsessed with Club Penguin as a kid, even going as far as wanting to become a game developer to pursue developing games professionally!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I remember June used to be super obsessed with Club Penguin as a kid, even going as far as wanting to become a game developer to pursue developing games professionally!",
+"type": &"dialogue"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "inDialogue"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "4",
+"type": &"mutation"
+},
+"30": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "32",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Brown Puffle was definitely their favorite though. [wait = 0.2] Similar to the chocolate-colored puffball, June is super smart, inventive, and has a sweet tooth!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Brown Puffle was definitely their favorite though. [wait = 0.2] Similar to the chocolate-colored puffball, June is super smart, inventive, and has a sweet tooth!",
+"type": &"dialogue"
+},
+"32": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "34",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Haha, how adorable… [wait = 0.2]I know June is just really stressed out and burnt out right now,[wait = 0.2] but maybe some good old flash games will cheer them up..?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Haha, how adorable… [wait = 0.2]I know June is just really stressed out and burnt out right now,[wait = 0.2] but maybe some good old flash games will cheer them up..?",
+"type": &"dialogue"
+},
+"34": {
+"id": "34",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "inDialogue"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "36",
+"type": &"mutation"
+},
+"36": {
+"id": "36",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"38": {
+"id": "38",
+"next_id": "40",
+"text": "Merch",
+"type": &"title"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "position"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": &"dictionary_reference",
+"value": Array[Dictionary]([{
+"type": "number",
+"value": 0
+}]),
+"variable": "index"
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"40": {
+"id": "40",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "inDialogue"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "41",
+"type": &"mutation"
+},
+"41": {
+"id": "41",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "position"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": &"dictionary_reference",
+"value": Array[Dictionary]([{
+"type": "number",
+"value": 2
+}]),
+"variable": "index"
+}]),
+"is_blocking": true
+},
+"next_id": "43",
+"type": &"mutation"
+},
+"43": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "43",
+"next_id": "45",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Looks like June still keeps around the offer package Snowstorm Games.[wait = 0.2] I still remember how initially they were so excited for the role, thinking that it was their dream job at their dream company.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Looks like June still keeps around the offer package Snowstorm Games.[wait = 0.2] I still remember how initially they were so excited for the role, thinking that it was their dream job at their dream company.",
+"type": &"dialogue"
+},
+"45": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "47",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "They were telling me how excited they were to be able to be part of an all-encompassing “welcoming” team.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "They were telling me how excited they were to be able to be part of an all-encompassing “welcoming” team.",
+"type": &"dialogue"
+},
+"47": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "47",
+"next_id": "49",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "After the first month, June was hesitant about the workplace demands, citing that the “Triple A” standards were especially tough with all of the “neverending” deadlines.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "After the first month, June was hesitant about the workplace demands, citing that the “Triple A” standards were especially tough with all of the “neverending” deadlines.",
+"type": &"dialogue"
+},
+"49": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "49",
+"next_id": "51",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The swag bag just seems cruel and ironic now.[wait = 0.2] A cheaply embroidered beanie?[wait = 0.2] A couple of stickers?[wait = 0.2] All in exchange for draining the passion out of June.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The swag bag just seems cruel and ironic now.[wait = 0.2] A cheaply embroidered beanie?[wait = 0.2] A couple of stickers?[wait = 0.2] All in exchange for draining the passion out of June.",
+"type": &"dialogue"
+},
+"51": {
+"id": "51",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameState"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "inDialogue"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "53",
+"type": &"mutation"
+},
+"53": {
+"id": "53",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"6": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "This must be the PC that June constantly works on. [wait = 0.2] Whenever I ask June to play Stardew, they always tell me they’re busy working on the newest game project,[wait = 0.2] Project Y for Snowstorm Games.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This must be the PC that June constantly works on. [wait = 0.2] Whenever I ask June to play Stardew, they always tell me they’re busy working on the newest game project,[wait = 0.2] Project Y for Snowstorm Games.",
+"type": &"dialogue"
+},
+"7": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "When taking a closer look at the files on June’s computer, it looks like a cluttered mess. [wait = 0.2] By no means do I consider myself someone tidy but this– [wait = 0.2] There are files everywhere on the desktop!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "When taking a closer look at the files on June’s computer, it looks like a cluttered mess. [wait = 0.2] By no means do I consider myself someone tidy but this– [wait = 0.2] There are files everywhere on the desktop!!",
+"type": &"dialogue"
+},
+"9": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "They must have been really stressed out.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "They must have been really stressed out.",
+"type": &"dialogue"
+}
+}
+raw_text = "~ Computer
+
+set GameState.inDialogue = true
+set GameState.position = GameState.index[0]
+
+Me: This must be the PC that June constantly works on. [wait = 0.2] Whenever I ask June to play Stardew, they always tell me they’re busy working on the newest game project,[wait = 0.2] Project Y for Snowstorm Games. 
+Me: When taking a closer look at the files on June’s computer, it looks like a cluttered mess. [wait = 0.2] By no means do I consider myself someone tidy but this– [wait = 0.2] There are files everywhere on the desktop!!
+
+Me: They must have been really stressed out.
+
+Me: …
+
+Me: It must have been really devastating for June when Project Y was recently shut down since the company was purchased out by Microsoft. 
+
+set GameState.inDialogue = false
+
+=> END
+
+~ Goober
+
+set GameState.inDialogue = true
+set GameState.position = GameState.index[1]
+
+Ah yes, beloved Brown Puffle plush! 
+
+The plush adorably sits and stares at you, no thoughts in its head. 
+
+Me: I remember June used to be super obsessed with Club Penguin as a kid, even going as far as wanting to become a game developer to pursue developing games professionally! 
+
+Me: Brown Puffle was definitely their favorite though. [wait = 0.2] Similar to the chocolate-colored puffball, June is super smart, inventive, and has a sweet tooth! 
+
+Me: Haha, how adorable… [wait = 0.2]I know June is just really stressed out and burnt out right now,[wait = 0.2] but maybe some good old flash games will cheer them up..?
+
+set GameState.inDialogue = false
+
+=> END
+
+~ Merch
+
+set GameState.inDialogue = true
+set GameState.position = GameState.index[2]
+
+Me: Looks like June still keeps around the offer package Snowstorm Games.[wait = 0.2] I still remember how initially they were so excited for the role, thinking that it was their dream job at their dream company.
+
+Me: They were telling me how excited they were to be able to be part of an all-encompassing “welcoming” team. 
+
+Me: After the first month, June was hesitant about the workplace demands, citing that the “Triple A” standards were especially tough with all of the “neverending” deadlines.
+
+Me: The swag bag just seems cruel and ironic now.[wait = 0.2] A cheaply embroidered beanie?[wait = 0.2] A couple of stickers?[wait = 0.2] All in exchange for draining the passion out of June. 
+
+set GameState.inDialogue = false
+
+=> END
+
+"
+metadata/dialogue_manager_version = "2.39.1"
